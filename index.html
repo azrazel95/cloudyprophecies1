@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <!-- navbar with the button to find locations -->
+    <nav class="navbar navbar-light bg-danger">
+        <a class="navbar-brand text-white">Weather Forecasts</a>
+        <form class="form-inline">
+          <input id="searchLocation" class="form-control mr-sm-2" type="search" placeholder="Find a location!" aria-label="Search">
+          <button id="searchbtn" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+        <!-- greeting card to display on pageload -->
+        <aside class="greeting" data-state="visible"><div class= "container">
+          <div class="card text-white bg-danger m-3" style="width: 30rem; height: 20rem;">
+              <div class="card-body">
+                <h2 class="card-title" >Welcome! Please search for a Location</h2>
+                </div>
+            </div></aside>
+        
+    <main class="hide" data-state="hidden">
+    <!-- recent search list  -->
+        <div class="text-white card bg-danger m-2" style="width: 13rem;">
+            <div class="card-header">
+              Recent Searches
+            </div>
+            <ul id="recentSearchList" class="list-group list-group-flush">
+              
+              
+            </ul>
+          </div>
+          <!-- current weather list -->
+        <div class= "container">
+        <div class="card text-white bg-danger m-3" style="width: 30rem; height: 20rem;">
+            <div class="card-body">
+              <h2 class="card-title" id="currentWeatherTitle"></h2>
+              <p class="card-text "id="currentTemperature"></p>
+              <p class="card-text "id="currentHum"></p>
+              <p class="card-text "id="currentWind"></p>
+
+            </div>
+          </div>
+    <!-- forecast cards -->
+        <div class= "container ">
+        <p class="alert alert-danger">
+            5 Day Forecast:
+        </p>
+        <div class="row">
+            <div class="card text-white border-success bg-danger column-sm-2 m-3" id="day0" style="max-width: 18rem;">
+                <div class="card-header" id="day0Title"></div>
+                <div class="card-body">
+                  <h5 class="card-title" id="day0Icon"></h5>
+                  <p class="card-text " id="day0Temperature"></p>
+                  <p class="card-text " id="day0Humidity"></p>
+                  <p class="card-text " id="day0WindSpeed"></p>
+                </div>
+              </div>
+              <div class="card text-white border-success bg-danger column-sm-2 m-3" id="day1" style="max-width: 18rem;">
+                <div class="card-header" id="day1Title"></div>
+                <div class="card-body">
+                  <h5 class="card-title" id="day1Icon"></h5>
+                  <p class="card-text" id="day1Temperature"></p>
+                  <p class="card-text" id="day1Humidity"></p>
+                  <p class="card-text" id="day1WindSpeed"></p>
+                </div>
+              </div>
+              <div class="card text-white border-success bg-danger column-sm-2 m-3" id="day2" style="max-width: 18rem;">
+                <div class="card-header" id="day2Title"></div>
+                <div class="card-body">
+                  <h5 class="card-title" id="day2Icon"></h5>
+                  <p class="card-text" id="day2Temperature"></p>
+                  <p class="card-text" id="day2Humidity"></p>
+                  <p class="card-text" id="day2WindSpeed"></p>
+                </div>
+              </div>
+              <div class="card text-white border-success bg-danger column-sm-2 m-3" id="day3" style="max-width: 18rem;">
+                <div class="card-header" id="day3Title"></div>
+                <div class="card-body">
+                  <h5 class="card-title" id="day3Icon"></h5>
+                  <p class="card-text" id="day3Temperature"></p>
+                  <p class="card-text" id="day3Humidity"></p>
+                  <p class="card-text" id="day3WindSpeed"></p>
+                </div>
+              </div>
+              <div class="card text-white border-success bg-danger column-sm-2 m-3" id="day4" style="max-width: 18rem;">
+                <div class="card-header" id="day4Title"></div>
+                <div class="card-body">
+                  <h5 class="card-title" id="day4Icon"></h5>
+                  <p class="card-text" id="day4Temperature"></p>
+                  <p class="card-text" id="day4Humidity"></p>
+                  <p class="card-text" id="day4WindSpeed"></p>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+</div>
+    </main>
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="./Assets/script.js"></script>
+</body>

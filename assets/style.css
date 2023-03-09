@@ -1,0 +1,14 @@
+
+/* most of my css comes from bootstrap, but i like the colour green */
+body {
+    background-color: rgb(57, 211, 160);
+}
+/* hides the weathercards on first pageload */
+.hide[data-state="hidden"] {
+    display:none !important;
+}
+/* displays the greeting card until there is a search */
+.greeting[data-state="hidden"] {
+    display:none !important;
+}
+
