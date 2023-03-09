@@ -12,7 +12,7 @@
 
 ## License
 
-![MIT](https://img.shields.io/github/license/azrazel95/cloudyprophecies)
+![MIT](https://img.shields.io/github/license/azrazel95/cloudyprophecies1)
 
 
 an interactive weather forecasting app
